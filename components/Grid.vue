@@ -16,10 +16,6 @@ export default Vue.extend({
     return { daysInYear: [...Array(365).keys()] }
   }
 })
-</script>>
-export default {
-
-}
 </script>
 
 <style>
