@@ -11,26 +11,36 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
-  props: {
-    number: {
-      type: Number,
-      required: true
-    }
-  },
-  data() {
-    return {
-      isDone: false
-    }
-  },
+import { Component, Vue, Prop } from 'nuxt-property-decorator'
 
-  methods: {
-    doneToggle() {
-      this.isDone = !this.isDone
-    }
+@Component
+export default class Cell extends Vue {
+  isDone = false;
+
+  doneToggle(number: number) {
+    this.isDone = !this.isDone
+    this.isDone ? this.add() : this.subtract()
   }
-})
+
+  // 「+」ボタンクリック時に呼ばれる
+  add () : void {
+    // mutations の increment を呼び出す
+    this.$store.commit('total/add', {
+      amount: this.number
+    })
+  }
+
+  // 「-」ボタンクリック時に呼ばれる
+  subtract () : void {
+    // mutations の decrement を呼び出す
+    this.$store.commit('total/subtract', {
+      amount: this.number
+    })
+  }
+
+  @Prop({ type: Number, required: true })
+  number!: number;
+}
 </script>
 
 <style></style>
