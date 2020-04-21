@@ -7,6 +7,7 @@
 module.exports = {
   theme: {
     inset: {
+      '0': '0',
       'for-cell': '0.75rem'
     },
     aspectRatio: {

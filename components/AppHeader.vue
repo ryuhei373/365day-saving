@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-red-500 w-full h-16 overflow-x-hidden">
-    <span class="text-gray-100 text-xl">365日メンダコ貯金</span>
+  <div class="sticky top-0 z-40 bg-red-500 w-full h-16 overflow-x-hidden">
+    <span class="text-gray-100 text-xl">365日貯金</span>
     <total />
   </div>
 </template>
