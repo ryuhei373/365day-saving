@@ -1,7 +1,9 @@
 <template>
-<div class="w-full grid grid-cols-6 gap-0 border-gray-600 border-t-2 border-l-2 overflow-x-hidden">
+  <div
+    class="w-full grid grid-cols-6 gap-0 border-gray-600 border-t-2 border-l-2 overflow-x-hidden"
+  >
     <cell v-for="n in 365" :key="n" :number="n" />
-</div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -18,6 +20,4 @@ export default Vue.extend({
 })
 </script>
 
-<style>
-
-</style>
+<style></style>

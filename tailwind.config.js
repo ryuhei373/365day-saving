@@ -1,9 +1,9 @@
 /*
-** TailwindCSS Configuration File
-**
-** Docs: https://tailwindcss.com/docs/configuration
-** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
-*/
+ ** TailwindCSS Configuration File
+ **
+ ** Docs: https://tailwindcss.com/docs/configuration
+ ** Default: https://github.com/tailwindcss/tailwindcss/blob/master/stubs/defaultConfig.stub.js
+ */
 module.exports = {
   theme: {
     inset: {
@@ -11,12 +11,10 @@ module.exports = {
     },
     aspectRatio: {
       'for-cell': [32, 31]
-    },
+    }
   },
   variants: {
-    aspectRatio: ['responsive'],
+    aspectRatio: ['responsive']
   },
-  plugins: [
-    require('tailwindcss-aspect-ratio')
-  ]
+  plugins: [require('tailwindcss-aspect-ratio')]
 }
