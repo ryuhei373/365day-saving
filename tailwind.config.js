@@ -17,5 +17,8 @@ module.exports = {
   variants: {
     aspectRatio: ['responsive']
   },
-  plugins: [require('tailwindcss-aspect-ratio')]
+  plugins: [
+    require('tailwindcss-aspect-ratio'),
+    require("tailwindcss-padding-safe")()
+  ]
 }

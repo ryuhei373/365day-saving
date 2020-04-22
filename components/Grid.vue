@@ -1,6 +1,6 @@
 <template>
   <div
-    class="z-0 w-full grid grid-cols-6 gap-0 border-gray-600 border-t-2 border-l-2 overflow-x-hidden"
+    class="z-0 w-full grid grid-cols-6 gap-0 border-gray-600 border-l-2 overflow-x-hidden pb-8-safe"
   >
     <cell v-for="n in 365" :key="n" :number="n" />
   </div>
