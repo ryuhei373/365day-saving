@@ -3,6 +3,7 @@ export default {
   /*
    ** Headers of the page
    */
+
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -51,6 +52,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {}
+    extend(config: any, ctx: any) {}
   }
 }

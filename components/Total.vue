@@ -5,14 +5,12 @@
 </template>
 
 <script lang="ts">
-
 import { Component, Vue } from 'nuxt-property-decorator'
 import { TotalState } from '~/store/total'
 
 @Component
 export default class CounterComponent extends Vue {
-
-  get count () : number {
+  get count(): number {
     return (this.$store.state.total as TotalState).total
   }
 }

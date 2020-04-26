@@ -4,9 +4,10 @@
     class="relative flex justify-center items-center aspect-ratio-for-cell border-gray-600 border-solid border-b-2 border-r-2"
     @click="doneToggle"
   >
-    <span class="absolute top-for-cell w-full h-0 text-2xl text-gray-500 select-none">{{
-      number
-    }}</span>
+    <span
+      class="absolute top-for-cell w-full h-0 text-2xl text-gray-500 select-none"
+      >{{ number }}</span
+    >
   </div>
 </template>
 
@@ -15,15 +16,15 @@ import { Component, Vue, Prop } from 'nuxt-property-decorator'
 
 @Component
 export default class Cell extends Vue {
-  isDone = false;
+  isDone = false
 
-  doneToggle(number: number) {
+  doneToggle() {
     this.isDone = !this.isDone
     this.isDone ? this.add() : this.subtract()
   }
 
   // 「+」ボタンクリック時に呼ばれる
-  add () : void {
+  add(): void {
     // mutations の increment を呼び出す
     this.$store.commit('total/add', {
       amount: this.number
@@ -31,7 +32,7 @@ export default class Cell extends Vue {
   }
 
   // 「-」ボタンクリック時に呼ばれる
-  subtract () : void {
+  subtract(): void {
     // mutations の decrement を呼び出す
     this.$store.commit('total/subtract', {
       amount: this.number
@@ -39,7 +40,7 @@ export default class Cell extends Vue {
   }
 
   @Prop({ type: Number, required: true })
-  number!: number;
+  number!: number
 }
 </script>
 
